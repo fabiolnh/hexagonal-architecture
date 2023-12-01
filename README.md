@@ -1,2 +1,3 @@
-# hexagonal-architecture
-Hexagonal Architecture
+# Hexagonal Architecture (Currently Studying)
+
+- 
