@@ -1,14 +1,13 @@
-package com.example.demo.repository.mongo;
+package com.example.demo.adapters.outbound.db.mongo;
 
-import com.example.demo.domain.Order;
-import com.example.demo.repository.OrderRepository;
+import com.example.demo.application.domain.OrderPort;
+import com.example.demo.application.repository.OrderRepositoryPort;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 @Component
 //@Primary
-public class MongoDbOrderRepository implements OrderRepository {
+public class MongoDbOrderRepository implements OrderRepositoryPort {
 
     private final SpringDataMongoOrderRepository orderRepository;
 
@@ -18,7 +17,7 @@ public class MongoDbOrderRepository implements OrderRepository {
     }
 
     @Override
-    public void save(final Order order) {
-        orderRepository.save(order);
+    public void save(OrderPort order) {
+        orderRepository.save(new MongoOrder(order.getId(), order.getName()));
     }
 }

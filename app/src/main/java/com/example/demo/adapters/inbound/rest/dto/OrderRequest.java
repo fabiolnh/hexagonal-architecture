@@ -1,5 +1,6 @@
-package com.example.demo.controller.dto;
+package com.example.demo.adapters.inbound.rest.dto;
 
+import com.example.demo.application.controller.dto.OrderRequestPort;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -9,7 +10,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class OrderRequest {
+public class OrderRequest implements OrderRequestPort {
 
     @NotNull private String name;
     @JsonCreator

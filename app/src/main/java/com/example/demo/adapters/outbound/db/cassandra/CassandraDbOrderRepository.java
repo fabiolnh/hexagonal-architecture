@@ -1,13 +1,13 @@
-package com.example.demo.repository.cassandra;
+package com.example.demo.adapters.outbound.db.cassandra;
 
-import com.example.demo.domain.Order;
-import com.example.demo.domain.cassandra.CassandraOrder;
-import com.example.demo.repository.OrderRepository;
+import com.example.demo.adapters.outbound.db.mongo.MongoOrder;
+import com.example.demo.application.domain.OrderPort;
+import com.example.demo.application.repository.OrderRepositoryPort;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
-public class CassandraDbOrderRepository implements OrderRepository {
+public class CassandraDbOrderRepository implements OrderRepositoryPort {
 
     private final SpringDataCassandraOrderRepository orderRepository;
 
@@ -17,8 +17,7 @@ public class CassandraDbOrderRepository implements OrderRepository {
     }
 
     @Override
-    public void save(Order order) {
+    public void save(OrderPort order) {
         orderRepository.save(new CassandraOrder(order.getId(), order.getName()));
     }
-
 }
