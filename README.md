@@ -1,4 +1,4 @@
-# Hexagonal Architecture (Currently Studying)
+# Hexagonal Architecture
 
 - Ports and Adapters
 - Separate the Technical Complexity with the Business Complexity
