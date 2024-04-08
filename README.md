@@ -22,4 +22,4 @@ OBS:
  * Drivers: Entry / In
  * Resources: Consuming / Out
 
-- ![Branas](https://alistair.cockburn.us/wp-content/uploads/2018/02/Hexagonal-architecture-branas.jpg)
+- ![Branas](https://github.com/fabiolnh/hexagonal-archtecture/assets/Hexagonal-architecture-branas.png)
