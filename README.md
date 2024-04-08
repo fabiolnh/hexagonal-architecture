@@ -17,3 +17,9 @@
 - Instead of the application directly accessing the Components (Adapter), it accesses the Interface (Port). The same occurs to the outside to inside (ex: a REST call to the service).
 - SOLID: Dependency Inversion Control (depends of interfaces, not the concrete implementation) (but do not be extremely critic, do not put interface in all of your system)
 - OBS: In Hexagonal Architecture, there is no default pattern of how you will organize your code. It is only a concept (Port and Adapter).
+
+OBS:
+ * Drivers: Entry / In
+ * Resources: Consuming / Out
+
+- ![Branas](https://alistair.cockburn.us/wp-content/uploads/2018/02/Hexagonal-architecture-branas.jpg)
