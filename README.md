@@ -20,6 +20,6 @@
 
 OBS:
  * Drivers: Entry / In
- * Driven Actors (Resources): Consuming / Out
+ * Driven Actors (can be called "Resources"): Out
 
 - ![Branas](https://github.com/fabiolnh/hexagonal-architecture/blob/main/assets/Hexagonal-architecture-branas.png)
