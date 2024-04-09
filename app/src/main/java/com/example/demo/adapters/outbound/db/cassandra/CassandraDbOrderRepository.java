@@ -1,8 +1,7 @@
 package com.example.demo.adapters.outbound.db.cassandra;
 
-import com.example.demo.adapters.outbound.db.mongo.MongoOrder;
-import com.example.demo.application.domain.OrderPort;
-import com.example.demo.application.repository.OrderRepositoryPort;
+import com.example.demo.adapters.outbound.db.intefaces.OrderRepositoryPort;
+import com.example.demo.application.dto.OrderDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -17,7 +16,7 @@ public class CassandraDbOrderRepository implements OrderRepositoryPort {
     }
 
     @Override
-    public void save(OrderPort order) {
-        orderRepository.save(new CassandraOrder(order.getId(), order.getName()));
+    public void save(OrderDTO orderDTO) {
+        orderRepository.save(new CassandraOrder(orderDTO.getId(), orderDTO.getName()));
     }
 }

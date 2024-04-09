@@ -1,6 +1,5 @@
 package com.example.demo.adapters.outbound.db.mongo;
 
-import com.example.demo.application.domain.OrderPort;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -12,7 +11,7 @@ import java.util.UUID;
 @Getter
 @AllArgsConstructor
 @EqualsAndHashCode
-public class MongoOrder implements OrderPort {
+public class MongoOrder {
 
     private UUID id;
     private String name;

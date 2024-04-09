@@ -1,6 +1,5 @@
 package com.example.demo.application.dto;
 
-import com.example.demo.application.domain.OrderPort;
 import lombok.*;
 
 import java.util.UUID;
@@ -9,7 +8,7 @@ import java.util.UUID;
 @Setter
 @AllArgsConstructor
 @Builder
-public class Order implements OrderPort {
+public class OrderDTO {
     UUID id;
     String name;
 }

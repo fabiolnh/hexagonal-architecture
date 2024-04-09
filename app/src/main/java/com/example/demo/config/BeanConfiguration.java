@@ -1,7 +1,7 @@
 package com.example.demo.config;
 
 import com.example.demo.DemoApplication;
-import com.example.demo.application.repository.OrderRepositoryPort;
+import com.example.demo.adapters.outbound.db.intefaces.OrderRepositoryPort;
 import com.example.demo.adapters.outbound.db.mongo.MongoDbOrderRepository;
 import com.example.demo.adapters.outbound.db.mongo.SpringDataMongoOrderRepository;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;

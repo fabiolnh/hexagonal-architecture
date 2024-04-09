@@ -1,6 +1,5 @@
 package com.example.demo.adapters.outbound.db.cassandra;
 
-import com.example.demo.application.domain.OrderPort;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -13,7 +12,7 @@ import java.util.UUID;
 @NoArgsConstructor
 @Getter
 @Setter
-public class CassandraOrder implements OrderPort {
+public class CassandraOrder {
 
     @PrimaryKey
     private UUID id;

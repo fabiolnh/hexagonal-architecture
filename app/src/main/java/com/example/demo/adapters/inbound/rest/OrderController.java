@@ -1,9 +1,7 @@
 package com.example.demo.adapters.inbound.rest;
 
-import com.example.demo.application.controller.OrderControllerPort;
-import com.example.demo.adapters.inbound.rest.dto.OrderRequest;
-import com.example.demo.adapters.inbound.rest.dto.OrderResponse;
-import com.example.demo.application.domain.OrderPort;
+import com.example.demo.adapters.inbound.rest.dto.OrderRequestDTO;
+import com.example.demo.adapters.inbound.rest.dto.OrderResponseDTO;
 import com.example.demo.application.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -13,7 +11,7 @@ import java.util.UUID;
 
 @RestController
 @RequestMapping("/orders")
-public class OrderController implements OrderControllerPort {
+public class OrderController {
 
     private final OrderService orderService;
 
@@ -23,10 +21,10 @@ public class OrderController implements OrderControllerPort {
     }
 
     @PostMapping(produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
-    public OrderResponse createOrder(@RequestBody final OrderRequest orderRequest) {
-        final UUID id = orderService.createOrder(orderRequest);
+    public OrderResponseDTO createOrder(@RequestBody final OrderRequestDTO orderRequestDTO) {
+        final UUID id = orderService.createOrder(orderRequestDTO);
 
-        return new OrderResponse(id);
+        return new OrderResponseDTO(id);
     }
 
 }
